@@ -1,5 +1,14 @@
 extends layout
 
+
+
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to #{title} 
+  button(onclick="moveToNewMessageForm()") New Message
+  ul 
+    each message in messages 
+      li 
+        p #{message.user} 
+        p #{message.text} 
+        p #{message.added} 
